@@ -1,5 +1,9 @@
-export default function Home() {
+import { TabsContent } from "@/components/layout/TabsContent";
+
+export default function HomePage() {
   return (
-    <><h1>Hello World</h1></>
+    <div className="w-full h-full">
+      <TabsContent />
+    </div>
   );
-}
+};

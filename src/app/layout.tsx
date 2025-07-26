@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
+import { Header, Profile, MatrixRainBackground, TabsContent } from "@/components/layout";
+import { RouteContextProvider } from "@/context/route/RouteContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen text-white flex items-center justify-center`}
       >
-        {children}
+        <RouteContextProvider>
+          <MatrixRainBackground />
+          {/* Container */}
+          <div className="w-[80vw] h-[80vh] mx-auto relative rounded-lg shadow-lg opacity-80 inline-block">
+            <Header />
+            <div className="w-full h-full flex">
+              <Profile />
+              <div className="w-3/5 h-full">
+                {/* {children} */}
+                <TabsContent />
+              </div>
+            </div>
+          </div>
+        </RouteContextProvider>
       </body>
     </html>
   );
