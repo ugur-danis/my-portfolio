@@ -7,8 +7,6 @@ import {
     Database,
     Briefcase,
     GraduationCap,
-    Award,
-    Rocket
 } from "lucide-react";
 
 export const Resume = () => {
@@ -133,7 +131,7 @@ export const Resume = () => {
                                     </div>
                                     <p className="text-sm text-muted-foreground mb-2">Detaysoft • 2021 - Günümüz</p>
                                     <p className="text-sm text-foreground">
-                                        React ve TypeScript ile modern web uygulamaları geliştiriyorum. SAP UI5 ile enterprise 
+                                        React ve TypeScript ile modern web uygulamaları geliştiriyorum. SAP UI5 ile enterprise
                                         çözümler üzerinde çalışıyorum. Kullanıcı deneyimi ve performans odaklı geliştirme yapıyorum.
                                     </p>
                                 </div>
@@ -147,7 +145,7 @@ export const Resume = () => {
                                     <h4 className="font-medium text-foreground text-lg">Software Developer Intern</h4>
                                     <p className="text-sm text-muted-foreground mb-2">Detaysoft • 2021 - 2021 (2 ay)</p>
                                     <p className="text-sm text-foreground">
-                                        Frontend teknolojileri ile tanıştım ve React öğrenme sürecinde aktif projelerde yer aldım. 
+                                        Frontend teknolojileri ile tanıştım ve React öğrenme sürecinde aktif projelerde yer aldım.
                                         Takım çalışması ve agile metodolojiler konusunda deneyim kazandım.
                                     </p>
                                 </div>
@@ -161,7 +159,7 @@ export const Resume = () => {
                                     <h4 className="font-medium text-foreground text-lg">Web Designer</h4>
                                     <p className="text-sm text-muted-foreground mb-2">Sonart Ajans • 2020 - 2021 (3 ay)</p>
                                     <p className="text-sm text-foreground">
-                                        HTML, CSS ve JavaScript kullanarak web siteleri tasarladım. Responsive tasarım prensiplerini 
+                                        HTML, CSS ve JavaScript kullanarak web siteleri tasarladım. Responsive tasarım prensiplerini
                                         öğrendim ve kullanıcı deneyimi odaklı çalışmalar yaptım.
                                     </p>
                                 </div>
@@ -175,7 +173,7 @@ export const Resume = () => {
                                     <h4 className="font-medium text-foreground text-lg">Freelance Web Developer</h4>
                                     <p className="text-sm text-muted-foreground mb-2">Freelance • 2020 - 2020 (10 ay)</p>
                                     <p className="text-sm text-foreground">
-                                        Çeşitli projeler için web siteleri geliştirdim. Müşteri iletişimi, proje yönetimi ve 
+                                        Çeşitli projeler için web siteleri geliştirdim. Müşteri iletişimi, proje yönetimi ve
                                         bağımsız çalışma deneyimi kazandım. Farklı sektörlerde projeler tamamladım.
                                     </p>
                                 </div>
@@ -189,7 +187,7 @@ export const Resume = () => {
                                     <h4 className="font-medium text-foreground text-lg">Lise Zorunlu Staj</h4>
                                     <p className="text-sm text-muted-foreground mb-2">Çamlıbel Elektrik Dağıtım A.Ş. • 2019 - 2019 (7 ay)</p>
                                     <p className="text-sm text-foreground">
-                                        Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve 
+                                        Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve
                                         profesyonel çalışma kültürü konusunda deneyim kazandım.
                                     </p>
                                 </div>
