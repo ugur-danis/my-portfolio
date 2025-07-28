@@ -15,7 +15,7 @@ const ProfileVideo = () => {
             </video>
             <div className="absolute -bottom-8 lg:-bottom-15 left-1/2 transform -translate-x-1/2">
                 <div className="w-24 h-24 lg:w-36 lg:h-36">
-                    <Image width={144} height={144} src="/avatar.png" alt="Profile" className={`w-full h-full object-cover rounded-xl shadow-md shadow-[#547200]`} />
+                    <Image priority={true} width={144} height={144} src="/avatar.png" alt="Profile" className={`w-full h-full object-cover rounded-xl shadow-md shadow-[#547200]`} />
                 </div>
             </div>
         </div>
