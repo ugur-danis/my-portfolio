@@ -2,13 +2,12 @@
 
 import { useRoute, RouteType } from "@/context/route/RouteContext";
 import { useTheme } from "@/context/theme";
-import { FileUser, FolderKanban, Mail, Newspaper, Sun, User, Moon } from "lucide-react";
+import { FileUser, FolderKanban, Mail, Sun, User, Moon } from "lucide-react";
 
 const NAV_ITEMS = [
     { name: "ABOUT", href: "#about", icon: <User /> },
     { name: "RESUME", href: "#resume", icon: <FileUser /> },
     { name: "PROJECTS", href: "#projects", icon: <FolderKanban /> },
-    { name: "ARTICLE", href: "#articles", icon: <Newspaper /> },
     { name: "CONTACT", href: "#contact", icon: <Mail /> },
 ];
 

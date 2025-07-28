@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 // Route tiplerini tanımlayalım
-export type RouteType = "#about" | "#resume" | "#projects" | "#articles" | "#contact";
+export type RouteType = "#about" | "#resume" | "#projects" | "#contact";
 
 type TRouteContext = {
     route: RouteType;
@@ -16,14 +16,13 @@ type TRouteContext = {
 const RouteContext = createContext<TRouteContext | undefined>(undefined);
 
 // Geçerli route'ları tanımlayalım
-const VALID_ROUTES: RouteType[] = ["#about", "#resume", "#projects", "#articles", "#contact"];
+const VALID_ROUTES: RouteType[] = ["#about", "#resume", "#projects", "#contact"];
 
 // Route başlıkları
 const ROUTE_TITLES: Record<RouteType, string> = {
     "#about": "About Me",
     "#resume": "Resume",
     "#projects": "Projects",
-    "#articles": "Articles",
     "#contact": "Contact"
 };
 
@@ -106,7 +105,6 @@ export const useRoute = () => {
         isAbout: isActive("#about"),
         isResume: isActive("#resume"),
         isProjects: isActive("#projects"),
-        isArticles: isActive("#articles"),
         isContact: isActive("#contact"),
     };
 };
