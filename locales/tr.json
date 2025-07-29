@@ -1,0 +1,149 @@
+{
+  "navigation": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "resume": "Özgeçmiş",
+    "contact": "İletişim"
+  },
+  "profile": {
+    "name": "Uğur Danış",
+    "title": "Full Stack Developer",
+    "description": "Mobil, web ve backend geliştirme konusunda tutkulu bir yazılım geliştiricisi",
+    "downloadCV": "CV İndir",
+    "downloadCVShort": "CV",
+    "contactMe": "İletişim",
+    "contactMeShort": "İletişim"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "intro": "Merhaba, ben Uğur. 4 yıldan uzun süredir yazılım geliştiriyorum; bazen ekrana saatlerce bakan, bazen bir satırla dünyayı kurtaran (ya da tamamen bozan) biriyim.",
+    "experience": "Mobil uygulamalardan web arayüzlerine, Node.js ile yazılmış arka uç servislerden sade ama akıcı kullanıcı deneyimlerine kadar birçok alanda elim kod tuttu. Kullanıcıyı merkeze koyan, sade ama işlevsel işler üretmeyi seviyorum. \"Çalışıyor ama güzel değil\" yerine, \"çalışıyor ve güzel\" hedefimdir.",
+    "passion": "Yeni teknolojileri kurcalamayı, temiz kod yazmayı ve bir problemi çözüme kavuşturduğumda içimden \"işte bu\" demeyi severim.",
+    "summary": "Kısaca: tasarımı hisseden, kodu seven, detayları dert eden bir geliştiriciyim.",
+    "quote": "Kahvemi sade, kodumu temiz severim.",
+    "skillsTitle": "Ne Yapıyorum?"
+  },
+  "projects": {
+    "title": "Projelerim",
+    "projectCount": "Proje",
+    "code": "Kod",
+    "demo": "Demo",
+    "status": {
+      "completed": "Tamamlandı",
+      "active": "Aktif"
+    },
+    "items": [
+      {
+        "title": "E-Ticaret Web Uygulaması",
+        "description": "React ve Node.js ile geliştirilmiş tam kapsamlı e-ticaret platformu. Kullanıcı yönetimi, ürün kataloğu, sepet işlemleri ve ödeme entegrasyonu içerir."
+      },
+      {
+        "title": "Fitness Takip Uygulaması",
+        "description": "Flutter ile geliştirilmiş cross-platform mobil uygulama. Egzersiz takibi, kalori hesaplama ve ilerleme grafikleri özellikleri bulunur."
+      },
+      {
+        "title": "Task Management API",
+        "description": "Node.js ve Express ile geliştirilmiş RESTful API. Kullanıcı görev yönetimi, takım çalışması ve gerçek zamanlı bildirimler."
+      },
+      {
+        "title": "Portfolio Web Sitesi",
+        "description": "Next.js ve TypeScript ile geliştirilmiş modern portfolio sitesi. Responsive tasarım, dark mode ve animasyonlar içerir."
+      },
+      {
+        "title": "Hava Durumu Uygulaması",
+        "description": "React Native ile geliştirilmiş hava durumu uygulaması. Konum bazlı hava durumu bilgisi ve 7 günlük tahmin."
+      },
+      {
+        "title": "Blog Platformu",
+        "description": "Full-stack blog platformu. Markdown desteği, yorum sistemi ve admin paneli özellikleri."
+      }
+    ]
+  },
+  "skills": {
+    "mobile": {
+      "title": "Mobil Geliştirme",
+      "description": "Flutter ile hem Android hem iOS için performanslı, modern ve kullanıcı dostu uygulamalar geliştiriyorum."
+    },
+    "web": {
+      "title": "Web Geliştirme",
+      "description": "React ile hızlı, etkileşimli ve şık web arayüzleri inşa ediyorum. UI/UX uyumuna dikkat eden, sade ama etkili tasarımlar üretmeyi seviyorum."
+    },
+    "backend": {
+      "title": "Backend Geliştirme",
+      "description": "Node.js ve Express ile güçlü ve ölçeklenebilir API'ler yazıyor, veritabanı yönetimi ve sunucu tarafı işlemleri sorunsuzca çözüyorum."
+    },
+    "product": {
+      "title": "Ürün Odaklı",
+      "description": "Kodun ötesinde, kullanıcıyı ve ürünü merkeze koyan bir bakış açısıyla çalışıyorum. İşlevsellik, sadelik ve sürdürülebilirlik benim için vazgeçilmez."
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Projeleriniz için benimle iletişime geçebilir, sorularınızı sorabilir veya sadece merhaba diyebilirsiniz. Size en kısa sürede dönüş yapacağım.",
+    "email": "E-posta",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "location": "Konum",
+    "contactInfo": "İletişim Bilgileri",
+    "sendMessage": "Mesaj Gönder",
+    "name": "Ad Soyad",
+    "namePlaceholder": "Adınız ve soyadınız",
+    "emailPlaceholder": "ornek@email.com",
+    "subject": "Konu",
+    "subjectPlaceholder": "Konu seçiniz",
+    "message": "Mesaj",
+    "messagePlaceholder": "Mesajınızı buraya yazın...",
+    "sendButton": "Mesaj Gönder",
+    "subjectOptions": {
+      "project": "Proje Teklifi",
+      "freelance": "Freelance İş",
+      "collaboration": "İş Birliği",
+      "question": "Soru",
+      "other": "Diğer"
+    }
+  },
+  "resume": {
+    "title": "Özgeçmiş",
+    "skillsTitle": "Yeteneklerim",
+    "experienceTitle": "Deneyim",
+    "educationTitle": "Eğitim",
+    "education": {
+      "managementInformationSystems": "Yönetim Bilişim Sistemleri",
+      "computerProgramming": "Bilgisayar Programcılığı",
+      "informationTechnology": "Bilişim Teknolojileri"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontend Geliştirme",
+        "description": "React ile hızlı, etkileşimli ve şık web arayüzleri inşa ediyorum. UI/UX uyumuna dikkat eden, sade ama etkili tasarımlar üretmeyi seviyorum."
+      },
+      "backend": {
+        "title": "Backend Geliştirme",
+        "description": "Node.js ve Express ile güçlü ve ölçeklenebilir API'ler yazıyor, veritabanı yönetimi ve sunucu tarafı işlemleri sorunsuzca çözüyorum."
+      }
+    },
+    "experience": {
+      "detaysoft": {
+        "title": "Detaysoft",
+        "date": "2021 - Günümüz",
+        "description": "React ile hızlı, etkileşimli ve şık web arayüzleri inşa ediyorum. UI/UX uyumuna dikkat eden, sade ama etkili tasarımlar üretmeyi seviyorum."
+      },
+      "sonart": {
+        "title": "Sonart Ajans",
+        "date": "2020 - 2021 (3 ay)",
+        "description": "HTML, CSS ve JavaScript kullanarak web siteleri tasarladım. Responsive tasarım prensiplerini öğrendim ve kullanıcı deneyimi odaklı çalışmalar yaptım."
+      },
+      "freelance": {
+        "title": "Freelance",
+        "date": "2020 - 2020 (10 ay)",
+        "description": "Çeşitli projeler için web siteleri geliştirdim. Müşteri iletişimi, proje yönetimi ve bağımsız çalışma deneyimi kazandım. Farklı sektörlerde projeler tamamladım."
+      },
+      "staj": {
+        "title": "Çamlıbel Elektrik Dağıtım A.Ş.",
+        "date": "2019 - 2019 (7 ay)",
+        "description": "Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve profesyonel çalışma kültürü konusunda deneyim kazandım."
+      }
+    }
+  }
+}

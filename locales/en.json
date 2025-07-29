@@ -1,0 +1,149 @@
+{
+  "navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "profile": {
+    "name": "Uğur Danış",
+    "title": "Full Stack Developer",
+    "description": "A passionate software developer specializing in mobile, web, and backend development",
+    "downloadCV": "Download CV",
+    "downloadCVShort": "CV",
+    "contactMe": "Contact Me",
+    "contactMeShort": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Hello, I'm Uğur. I've been developing software for over 4 years; sometimes someone who stares at the screen for hours, sometimes someone who saves (or completely breaks) the world with a single line of code.",
+    "experience": "From mobile applications to web interfaces, from backend services written with Node.js to simple but smooth user experiences, my hands have touched code in many areas. I love creating user-centered, simple but functional work. My goal is 'it works and it's beautiful' rather than 'it works but it's not beautiful'.",
+    "passion": "I love exploring new technologies, writing clean code, and saying 'that's it' to myself when I solve a problem.",
+    "summary": "In short: I'm a developer who feels design, loves code, and cares about details.",
+    "quote": "I like my coffee black, my code clean.",
+    "skillsTitle": "What Do I Do?"
+  },
+  "projects": {
+    "title": "My Projects",
+    "projectCount": "Projects",
+    "code": "Code",
+    "demo": "Demo",
+    "status": {
+      "completed": "Completed",
+      "active": "Active"
+    },
+    "items": [
+      {
+        "title": "E-Commerce Web Application",
+        "description": "A comprehensive e-commerce platform developed with React and Node.js. Includes user management, product catalog, cart operations, and payment integration."
+      },
+      {
+        "title": "Fitness Tracking Application",
+        "description": "Cross-platform mobile application developed with Flutter. Features exercise tracking, calorie calculation, and progress charts."
+      },
+      {
+        "title": "Task Management API",
+        "description": "RESTful API developed with Node.js and Express. User task management, team collaboration, and real-time notifications."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Modern portfolio website developed with Next.js and TypeScript. Includes responsive design, dark mode, and animations."
+      },
+      {
+        "title": "Weather Application",
+        "description": "Weather application developed with React Native. Location-based weather information and 7-day forecast."
+      },
+      {
+        "title": "Blog Platform",
+        "description": "Full-stack blog platform. Markdown support, comment system, and admin panel features."
+      }
+    ]
+  },
+  "skills": {
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "I develop performant, modern, and user-friendly applications for both Android and iOS using Flutter."
+    },
+    "web": {
+      "title": "Web Development",
+      "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+    },
+    "backend": {
+      "title": "Backend Development",
+      "description": "I write powerful and scalable APIs with Node.js and Express, solving database management and server-side operations seamlessly."
+    },
+    "product": {
+      "title": "Product-Oriented",
+      "description": "Beyond code, I work with a perspective that puts the user and product at the center. Functionality, simplicity, and sustainability are indispensable for me."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "You can contact me for your projects, ask your questions, or just say hello. I'll get back to you as soon as possible.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "location": "Location",
+    "contactInfo": "Contact Information",
+    "sendMessage": "Send Message",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "example@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Select a subject",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "sendButton": "Send Message",
+    "subjectOptions": {
+      "project": "Project Proposal",
+      "freelance": "Freelance Work",
+      "collaboration": "Collaboration",
+      "question": "Question",
+      "other": "Other"
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "skillsTitle": "Skills",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "education": {
+      "managementInformationSystems": "Management Information Systems",
+      "computerProgramming": "Computer Programming",
+      "informationTechnology": "Information Technology"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "I write powerful and scalable APIs with Node.js and Express, solving database management and server-side operations seamlessly."
+      }
+    },
+    "experience": {
+      "detaysoft": {
+        "title": "Detaysoft",
+        "date": "2021 - Present",
+        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+      },
+      "sonart": {
+        "title": "Sonart Ajans",
+        "date": "2020 - 2021 (3 ay)",
+        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+      },
+      "freelance": {
+        "title": "Freelance",
+        "date": "2020 - 2020 (10 ay)",
+        "description": "I developed websites for various projects. I gained experience in customer communication, project management, and independent work. I completed projects in different sectors."
+      },
+      "staj": {
+        "title": "Çamlıbel Elektrik Dağıtım A.Ş.",
+        "date": "2019 - 2019 (7 ay)",
+        "description": "I gained experience in corporate work environment during my compulsory internship at Çamlıbel Elektrik Dağıtım A.Ş. I gained experience in work discipline and professional work culture."
+      }
+    }
+  }
+}

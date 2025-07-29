@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from 'next-intl';
 import { GitHubIcon, LinkedInIcon, InstagramIcon } from "@/components/icons";
 import { Download, Send } from "lucide-react";
 import Typewriter from 'typewriter-effect';
@@ -21,7 +22,6 @@ const ProfileVideo = () => {
         </div>
     );
 };
-
 
 const SocialMediaItems = [
     {
@@ -66,23 +66,28 @@ const SocialMediaLinks = () => {
 };
 
 export const Profile = () => {
+    const t = useTranslations('profile');
+
     return (
         // Container
         <div className="relative w-full lg:w-2/5 h-auto lg:h-full bg-card rounded-lg lg:rounded-r-none lg:rounded-br-none shadow-xs flex flex-col border border-border">
             {/* Content */}
             <ProfileVideo />
             <div className="flex flex-col items-center mt-16 lg:mt-20 flex-1">
-                <h1 className="text-2xl lg:text-3xl font-bold mb-2 text-center">Uğur Danış</h1>
+                <h1 className="text-2xl lg:text-3xl font-bold mb-2 text-center">{t('name')}</h1>
 
                 <div className="text-sm lg:text-base text-center">
                     <Typewriter
                         options={{
-                            strings: ['Software Developer', 'Mobile Developer', 'Web Developer'],
+                            strings: [t('title'), 'Mobile Developer', 'Web Developer'],
                             autoStart: true,
                             loop: true,
                         }}
                     />
                 </div>
+                <p className="text-xs lg:text-sm text-muted-foreground text-center mt-2 px-4">
+                    {t('description')}
+                </p>
                 <SocialMediaLinks />
             </div>
             {/* Bottom Buttons */}
@@ -90,13 +95,13 @@ export const Profile = () => {
                 <div className="flex">
                     <a href="#" className="flex align-center justify-center w-1/2 p-4 lg:p-6 border-t-2 border-r-2 border-border group hover:text-primary transition duration-200 text-sm lg:text-base">
                         <Download className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-y-1 transition duration-200" />
-                        <span className="ml-2 hidden sm:inline">Download CV</span>
-                        <span className="ml-2 sm:hidden">CV</span>
+                        <span className="ml-2 hidden sm:inline">{t('downloadCV')}</span>
+                        <span className="ml-2 sm:hidden">{t('downloadCVShort')}</span>
                     </a>
                     <a href="#contact" className="flex align-center justify-center w-1/2 p-4 lg:p-6 border-t-2 border-border group hover:text-primary transition duration-200 text-sm lg:text-base">
                         <Send className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-y-1 transition duration-200" />
-                        <span className="ml-2 hidden sm:inline">Contact Me</span>
-                        <span className="ml-2 sm:hidden">Contact</span>
+                        <span className="ml-2 hidden sm:inline">{t('contactMe')}</span>
+                        <span className="ml-2 sm:hidden">{t('contactMeShort')}</span>
                     </a>
                 </div>
             </div>

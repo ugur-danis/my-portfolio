@@ -8,24 +8,27 @@ import {
     Briefcase,
     GraduationCap,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const Resume = () => {
+    const t = useTranslations('resume');
+
     return (
         <AnimatedPage>
             <div className="space-y-8 p-4 lg:p-6">
-                <h2 className="text-xl lg:text-2xl font-bold text-primary mb-6">Resume</h2>
+                <h2 className="text-xl lg:text-2xl font-bold text-primary mb-6">{t('title')}</h2>
 
                 {/* Skills Section */}
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
                     <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                         <Zap className="text-2xl" />
-                        Yeteneklerim
+                        {t('skillsTitle')}
                     </h3>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div className="space-y-4">
                             <h4 className="text-sm lg:text-base font-medium text-foreground flex items-center gap-2">
                                 <Code className="text-base text-white" />
-                                Frontend Geliştirme
+                                {t('skills.frontend.title')}
                             </h4>
                             <div className="space-y-3">
                                 <div>
@@ -69,7 +72,7 @@ export const Resume = () => {
                         <div className="space-y-4">
                             <h4 className="text-sm lg:text-base font-medium text-foreground flex items-center gap-2">
                                 <Database className="text-base text-white" />
-                                Backend & Mobil
+                                {t('skills.backend.title')}
                             </h4>
                             <div className="space-y-3">
                                 <div>
@@ -117,7 +120,7 @@ export const Resume = () => {
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
                     <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                         <Briefcase className="text-2xl" />
-                        Deneyim
+                        {t('experienceTitle')}
                     </h3>
                     <div className="space-y-6">
                         <div className="relative">
@@ -200,26 +203,26 @@ export const Resume = () => {
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
                     <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                         <GraduationCap className="text-2xl" />
-                        Eğitim
+                        {t('educationTitle')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
                             <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">Yönetim Bilişim Sistemleri</h4>
-                            <p className="text-sm text-muted-foreground">Anadolu Üniversitesi Açıköğretim</p>
-                            <p className="text-xs text-muted-foreground mt-1">2024 - Devam Ediyor</p>
+                            <h4 className="font-medium text-foreground">{t('education.managementInformationSystems')}</h4>
+                            <p className="text-sm text-muted-foreground">{t('education.managementInformationSystems.university')}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{t('education.managementInformationSystems.date')}</p>
                         </div>
                         <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
                             <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">Bilgisayar Programcılığı</h4>
-                            <p className="text-sm text-muted-foreground">İnönü Üniversitesi</p>
-                            <p className="text-xs text-muted-foreground mt-1">2020 - 2022</p>
+                            <h4 className="font-medium text-foreground">{t('education.computerProgramming')}</h4>
+                            <p className="text-sm text-muted-foreground">{t('education.computerProgramming.university')}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{t('education.computerProgramming.date')}</p>
                         </div>
                         <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
                             <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">Bilişim Teknolojileri</h4>
-                            <p className="text-sm text-muted-foreground">Sivas Bilişim Teknolojileri M.T.A.L</p>
-                            <p className="text-xs text-muted-foreground mt-1">2017 - 2020</p>
+                            <h4 className="font-medium text-foreground">{t('education.informationTechnology')}</h4>
+                            <p className="text-sm text-muted-foreground">{t('education.informationTechnology.university')}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{t('education.informationTechnology.date')}</p>
                         </div>
                     </div>
                 </section>

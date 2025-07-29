@@ -1,69 +1,62 @@
 "use client";
 
 import { AnimatedPage } from "@/components/ui/AnimatedPage";
-import {
-    ABOUT_INTRO,
-    ABOUT_EXPERIENCE,
-    ABOUT_PASSION,
-    ABOUT_SUMMARY,
-    ABOUT_QUOTE,
-    SKILL_MOBILE_DESCRIPTION,
-    SKILL_WEB_DESCRIPTION,
-    SKILL_BACKEND_DESCRIPTION,
-    SKILL_PRODUCT_DESCRIPTION
-} from "@/constants/texts";
+import { useTranslations } from 'next-intl';
 import { Monitor, Server, TabletSmartphone, Wrench } from "lucide-react";
 
-const skillsData = [
-    {
-        icon: <TabletSmartphone />,
-        title: "Mobil Uygulama Geliştirme",
-        description: SKILL_MOBILE_DESCRIPTION
-    },
-    {
-        icon: <Monitor />,
-        title: "Web Geliştirme",
-        description: SKILL_WEB_DESCRIPTION
-    },
-    {
-        icon: <Server />,
-        title: "Backend Geliştirme",
-        description: SKILL_BACKEND_DESCRIPTION
-    },
-    {
-        icon: <Wrench />,
-        title: "Ürün Odaklı Geliştirme",
-        description: SKILL_PRODUCT_DESCRIPTION
-    }
-];
-
 export const About = () => {
+    const t = useTranslations('about');
+    const tSkills = useTranslations('skills');
+
+    const skillsData = [
+        {
+            icon: <TabletSmartphone />,
+            title: tSkills('mobile.title'),
+            description: tSkills('mobile.description')
+        },
+        {
+            icon: <Monitor />,
+            title: tSkills('web.title'),
+            description: tSkills('web.description')
+        },
+        {
+            icon: <Server />,
+            title: tSkills('backend.title'),
+            description: tSkills('backend.description')
+        },
+        {
+            icon: <Wrench />,
+            title: tSkills('product.title'),
+            description: tSkills('product.description')
+        }
+    ];
+
     return (
         <AnimatedPage>
             <div className="space-y-6 p-4 lg:p-6">
                 {/* Personal Introduction */}
                 <section>
-                    <h2 className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4">About Me</h2>
+                    <h2 className="text-xl lg:text-2xl font-bold text-primary mb-3 lg:mb-4">{t('title')}</h2>
                     <p className="leading-relaxed text-sm lg:text-base text-foreground mb-4">
-                        {ABOUT_INTRO}
+                        {t('intro')}
                     </p>
                     <p className="leading-relaxed text-sm lg:text-base text-foreground mb-4">
-                        {ABOUT_EXPERIENCE}
+                        {t('experience')}
                     </p>
                     <p className="leading-relaxed text-sm lg:text-base text-foreground">
-                        {ABOUT_PASSION}
+                        {t('passion')}
                     </p>
                     <p className="leading-relaxed text-sm lg:text-base text-foreground mb-4">
-                        {ABOUT_SUMMARY}
+                        {t('summary')}
                     </p>
                     <p className="leading-relaxed text-sm lg:text-base text-foreground">
-                        {ABOUT_QUOTE}
+                        {t('quote')}
                     </p>
                 </section>
 
                 {/* Skills Section */}
                 <section>
-                    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4">Ne Yapıyorum?</h3>
+                    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4">{t('skillsTitle')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {skillsData.map((skill, index) => (
                             <div
