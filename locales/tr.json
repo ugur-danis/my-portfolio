@@ -5,6 +5,12 @@
     "resume": "Özgeçmiş",
     "contact": "İletişim"
   },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "backHome": "Ana Sayfaya Dön",
+    "errorCode": "404"
+  },
   "profile": {
     "name": "Uğur Danış",
     "title": "Full Stack Developer",

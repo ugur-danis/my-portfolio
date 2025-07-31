@@ -13,3 +13,4 @@ export { EducationCard } from './EducationCard';
 export { ContactInfoItem } from './ContactInfoItem';
 export { ContactForm } from './ContactForm';
 export { ProjectCard } from './ProjectCard';
+export { default as NotFoundPage } from './NotFoundPage';
