@@ -5,8 +5,7 @@ import { useTheme } from "@/context/theme";
 import { useRouter, usePathname } from 'next/navigation';
 import { Sun, Moon, Globe } from "lucide-react";
 import { useLocale, useTranslations } from 'next-intl';
-import { routing } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { Button, Badge } from "@/components/ui";
 import { NAV_ICONS } from "@/constants";
 import { NavItem, TranslationFunction } from "@/types";
 import { cn } from "@/lib/utils";
@@ -50,33 +49,30 @@ const LanguageSwitcher = () => {
     const router = useRouter();
     const pathname = usePathname();
 
-    const switchLanguage = (newLocale: string) => {
+    const switchLanguage = () => {
+        const newLocale = locale === 'tr' ? 'en' : 'tr';
         const currentPath = pathname.replace(`/${locale}`, '');
         router.push(`/${newLocale}${currentPath}`);
     };
 
+    const nextLanguage = locale === 'tr' ? 'EN' : 'TR';
+
     return (
-        <div className="relative group">
+        <div className="relative">
             <Button
                 variant="ghost"
                 size="sm"
                 icon={<Globe className="text-green-400" />}
+                onClick={switchLanguage}
                 className="w-full"
             />
-            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-card border border-border rounded-lg shadow-lg p-2 min-w-[80px] z-50">
-                {routing.locales.map((loc: string) => (
-                    <button
-                        key={loc}
-                        onClick={() => switchLanguage(loc)}
-                        className={cn(
-                            "block w-full text-left px-2 py-1 rounded text-xs hover:bg-accent transition-colors",
-                            locale === loc ? 'text-primary font-medium' : 'text-muted-foreground'
-                        )}
-                    >
-                        {loc.toUpperCase()}
-                    </button>
-                ))}
-            </div>
+            <Badge
+                variant="success"
+                size="sm"
+                className="absolute -top-1 -right-1 text-xs font-bold"
+            >
+                {nextLanguage}
+            </Badge>
         </div>
     );
 };
