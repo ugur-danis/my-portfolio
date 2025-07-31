@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 export const ContactForm = () => {
-    const t = useTranslations('contact');   
+    const t = useTranslations('contact');
     const subjectOptions = useMemo(() => [
         { value: "", label: t('subjectPlaceholder') },
         { value: "project", label: t('subjectOptions.project') },
