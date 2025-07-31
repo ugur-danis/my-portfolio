@@ -108,40 +108,52 @@
     "skillsTitle": "Skills",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
+    "active": "Active",
     "education": {
-      "managementInformationSystems": "Management Information Systems",
-      "computerProgramming": "Computer Programming",
-      "informationTechnology": "Information Technology"
+      "managementInformationSystems": {
+        "title": "Management Information Systems",
+        "university": "Anadolu University Open Education Faculty",
+        "date": "2024 - Present"
+      },
+      "computerProgramming": {
+        "title": "Computer Programming",
+        "university": "Malatya İnönü University",
+        "date": "2019 - 2021"
+      },
+      "informationTechnology": {
+        "title": "Web Programming",
+        "university": "Sivas Bilişim Teknolojileri M.T.A.L",
+        "date": "2017 - 2019"
+      }
     },
     "skills": {
       "frontend": {
-        "title": "Frontend Development",
-        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+        "title": "Frontend Development"
       },
       "backend": {
-        "title": "Backend Development",
-        "description": "I write powerful and scalable APIs with Node.js and Express, solving database management and server-side operations seamlessly."
+        "title": "Backend Development"
       }
     },
     "experience": {
       "detaysoft": {
-        "title": "Detaysoft",
-        "date": "2021 - Present",
-        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+        "period": "2021 - Present",
+        "description": "I took part in web and mobile projects using SAP UI5, React, and React Native technologies. I focused on software quality with Git, CI/CD processes, unit and integration tests. I gained experience in UX-oriented interface design and development.",
+        "intern": {
+          "period": "2021 - 2021 (2 months)",
+          "description": "During my internship, I developed a RESTful API with C# and learned fundamental software architecture concepts such as multi-threading. I also strengthened my basic frontend skills by developing small-scale applications with Vanilla JavaScript. In this period, I gained practical experience in both backend and frontend development processes."
+        }
       },
       "sonart": {
-        "title": "Sonart Ajans",
-        "date": "2020 - 2021 (3 ay)",
-        "description": "I build fast, interactive, and elegant web interfaces with React. I love creating designs that pay attention to UI/UX harmony, simple but effective."
+        "period": "2020 - 2021 (3 months)",
+        "description": "I designed websites using HTML, CSS, and JavaScript. I gained experience in responsive design principles and user-focused work."
       },
       "freelance": {
-        "title": "Freelance",
-        "date": "2020 - 2020 (10 ay)",
-        "description": "I developed websites for various projects. I gained experience in customer communication, project management, and independent work. I completed projects in different sectors."
+        "period": "2020 - 2020 (10 months)",
+        "description": "I developed websites for various projects. I gained experience in customer communication, project management, and independent work."
       },
-      "staj": {
-        "title": "Çamlıbel Elektrik Dağıtım A.Ş.",
-        "date": "2019 - 2019 (7 ay)",
+      "intern": {
+        "title": "Intern",
+        "period": "2019 - 2019 (7 months)",
         "description": "I gained experience in corporate work environment during my compulsory internship at Çamlıbel Elektrik Dağıtım A.Ş. I gained experience in work discipline and professional work culture."
       }
     }

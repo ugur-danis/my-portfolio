@@ -108,10 +108,23 @@
     "skillsTitle": "Yeteneklerim",
     "experienceTitle": "Deneyim",
     "educationTitle": "Eğitim",
+    "active": "Aktif",
     "education": {
-      "managementInformationSystems": "Yönetim Bilişim Sistemleri",
-      "computerProgramming": "Bilgisayar Programcılığı",
-      "informationTechnology": "Bilişim Teknolojileri"
+      "managementInformationSystems": {
+        "title": "Yönetim Bilişim Sistemleri",
+        "university": "Anadolu Üniversitesi Açıköğretim Fakültesi",
+        "date": "2024 - Devam Ediyor"
+      },
+      "computerProgramming": {
+        "title": "Bilgisayar Programcılığı",
+        "university": "Malatya İnönü Üniversitesi",
+        "date": "2019 - 2021"
+      },
+      "informationTechnology": {
+        "title": "Web Programcılığı",
+        "university": "Sivas Bilişim Teknolojileri M.T.A.L",
+        "date": "2017 - 2019"
+      }
     },
     "skills": {
       "frontend": {
@@ -125,23 +138,26 @@
     },
     "experience": {
       "detaysoft": {
-        "title": "Detaysoft",
-        "date": "2021 - Günümüz",
-        "description": "React ile hızlı, etkileşimli ve şık web arayüzleri inşa ediyorum. UI/UX uyumuna dikkat eden, sade ama etkili tasarımlar üretmeyi seviyorum."
+        "period": "2021 - Günümüz",
+        "description": "SAP UI5, React ve React Native teknolojileriyle web/mobil projelerde görev aldım. Git, CI/CD süreçleri, unit ve integration testleri ile yazılım kalitesine odaklandım. UX odaklı arayüz tasarımı ve geliştirme konusunda deneyim kazandım.",
+        "intern": {
+          "period": "2021 - 2021 (2 ay)",
+          "description": "Staj sürecimde C# ile bir RESTful API geliştirdim ve bu süreçte çoklu iş parçacığı (multi-threading) gibi temel yazılım mimarisi kavramlarını öğrendim. Aynı zamanda Vanilla JavaScript ile küçük çaplı uygulamalar geliştirerek temel frontend becerilerimi pekiştirdim. Bu dönemde hem backend hem frontend geliştirme süreçlerine dair pratik deneyim kazandım."
+        }
       },
       "sonart": {
         "title": "Sonart Ajans",
-        "date": "2020 - 2021 (3 ay)",
+        "period": "2020 - 2021 (3 ay)",
         "description": "HTML, CSS ve JavaScript kullanarak web siteleri tasarladım. Responsive tasarım prensiplerini öğrendim ve kullanıcı deneyimi odaklı çalışmalar yaptım."
       },
       "freelance": {
         "title": "Freelance",
-        "date": "2020 - 2020 (10 ay)",
+        "period": "2020 - 2020 (10 ay)",
         "description": "Çeşitli projeler için web siteleri geliştirdim. Müşteri iletişimi, proje yönetimi ve bağımsız çalışma deneyimi kazandım. Farklı sektörlerde projeler tamamladım."
       },
-      "staj": {
-        "title": "Çamlıbel Elektrik Dağıtım A.Ş.",
-        "date": "2019 - 2019 (7 ay)",
+      "intern": {
+        "title": "Stajyer",
+        "period": "2019 - 2019 (7 ay)",
         "description": "Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve profesyonel çalışma kültürü konusunda deneyim kazandım."
       }
     }

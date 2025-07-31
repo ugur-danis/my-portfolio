@@ -10,220 +10,240 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+// Types
+interface Skill {
+    name: string;
+    percentage: number;
+}
+
+interface Experience {
+    title: string;
+    company: string;
+    period: string;
+    description: string;
+    isActive?: boolean;
+}
+
+interface Education {
+    title: string;
+    university: string;
+    date: string;
+    isActive?: boolean;
+}
+
+// Constants
+const FRONTEND_SKILLS: Skill[] = [
+    { name: "React & Next.js", percentage: 95 },
+    { name: "TypeScript", percentage: 90 },
+    { name: "SAP UI5", percentage: 88 },
+    { name: "HTML/CSS/JavaScript", percentage: 92 },
+];
+
+const BACKEND_SKILLS: Skill[] = [
+    { name: "Node.js & Express", percentage: 90 },
+    { name: "Flutter", percentage: 85 },
+    { name: "MongoDB & PostgreSQL", percentage: 80 },
+    { name: ".NET Core & C#", percentage: 65 },
+];
+
+// Components
+const SkillBar = ({ skill }: { skill: Skill; }) => (
+    <div>
+        <div className="flex justify-between text-sm mb-1">
+            <span>{skill.name}</span>
+            <span>{skill.percentage}%</span>
+        </div>
+        <div className="w-full bg-muted rounded-full h-2">
+            <div
+                className="bg-primary h-2 rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${skill.percentage}%` }}
+            />
+        </div>
+    </div>
+);
+
+const SkillsSection = ({
+    title,
+    icon: Icon,
+    skills
+}: {
+    title: string;
+    icon: React.ComponentType<{ className?: string; }>;
+    skills: Skill[];
+}) => (
+    <div className="space-y-4">
+        <h4 className="text-sm lg:text-base font-medium text-foreground flex items-center gap-2">
+            <Icon className="text-base text-white" />
+            {title}
+        </h4>
+        <div className="space-y-3">
+            {skills.map((skill, index) => (
+                <SkillBar key={`${skill.name}-${index}`} skill={skill} />
+            ))}
+        </div>
+    </div>
+);
+
+const ExperienceItem = ({ experience, isLast, t }: { experience: Experience; isLast: boolean; t: (key: string) => string; }) => (
+    <div className="relative">
+        {!isLast && (
+            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30" />
+        )}
+        <div className="relative pl-8">
+            <div className={`absolute left-0 top-2 w-${experience.isActive ? '3' : '2'} h-${experience.isActive ? '3' : '2'} bg-primary rounded-full ${experience.isActive ? 'animate-pulse' : ''}`} />
+            <div className={`bg-card rounded-lg p-4 border ${experience.isActive ? 'border-2 border-primary/50 shadow-lg' : 'border-border/50'}`}>
+                <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-medium text-foreground text-lg">{experience.title}</h4>
+                    {experience.isActive && (
+                        <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-medium">
+                            {t('active')}
+                        </span>
+                    )}
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">
+                    {experience.company} • {experience.period}
+                </p>
+                <p className="text-sm text-foreground">{experience.description}</p>
+            </div>
+        </div>
+    </div>
+);
+
+const EducationCard = ({ education, t }: { education: Education; t: (key: string) => string; }) => (
+    <div className={`bg-card rounded-lg p-4 border text-center hover:border-primary/50 transition-colors duration-200 relative ${education.isActive ? 'border-2 border-primary/50 shadow-lg' : 'border-border/50'}`}>
+        {education.isActive && (
+            <span className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-medium">
+                {t('active')}
+            </span>
+        )}
+        <GraduationCap className="text-3xl mb-2 mx-auto" />
+        <h4 className="font-medium text-foreground mb-2">{education.title}</h4>
+        <p className="text-sm text-muted-foreground">{education.university}</p>
+        <p className="text-xs text-muted-foreground mt-1">{education.date}</p>
+    </div>
+);
+
+const SectionHeader = ({
+    title,
+    icon: Icon
+}: {
+    title: string;
+    icon: React.ComponentType<{ className?: string; }>;
+}) => (
+    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
+        <Icon className="text-2xl" />
+        {title}
+    </h3>
+);
+
 export const Resume = () => {
     const t = useTranslations('resume');
+
+    // Experiences data from translations
+    const EXPERIENCES: Experience[] = [
+        {
+            title: 'Frontend Developer',
+            company: 'Detaysoft',
+            period: t('experience.detaysoft.period'),
+            description: t('experience.detaysoft.description'),
+            isActive: true,
+        },
+        {
+            title: 'Software Developer Intern',
+            company: 'Detaysoft',
+            period: t('experience.detaysoft.intern.period'),
+            description: t('experience.detaysoft.intern.description'),
+        },
+        {
+            title: 'Web Designer',
+            company: 'Sonart Ajans',
+            period: t('experience.sonart.period'),
+            description: t('experience.sonart.description'),
+        },
+        {
+            title: 'Freelance Web Developer',
+            company: 'Freelance',
+            period: t('experience.freelance.period'),
+            description: t('experience.freelance.description'),
+        },
+        {
+            title: t('experience.intern.title'),
+            company: 'Çamlıbel Elektrik Dağıtım A.Ş.',
+            period: t('experience.intern.period'),
+            description: t('experience.intern.description'),
+        },
+    ];
+
+    // Education data from translations
+    const educationData: Education[] = [
+        {
+            title: t('education.managementInformationSystems.title'),
+            university: t('education.managementInformationSystems.university'),
+            date: t('education.managementInformationSystems.date'),
+            isActive: true,
+        },
+        {
+            title: t('education.computerProgramming.title'),
+            university: t('education.computerProgramming.university'),
+            date: t('education.computerProgramming.date'),
+        },
+        {
+            title: t('education.informationTechnology.title'),
+            university: t('education.informationTechnology.university'),
+            date: t('education.informationTechnology.date'),
+        },
+    ];
 
     return (
         <AnimatedPage>
             <div className="space-y-8 p-4 lg:p-6">
-                <h2 className="text-xl lg:text-2xl font-bold text-primary mb-6">{t('title')}</h2>
+                <h2 className="text-xl lg:text-2xl font-bold text-primary mb-6">
+                    {t('title')}
+                </h2>
 
                 {/* Skills Section */}
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
-                    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                        <Zap className="text-2xl" />
-                        {t('skillsTitle')}
-                    </h3>
+                    <SectionHeader title={t('skillsTitle')} icon={Zap} />
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div className="space-y-4">
-                            <h4 className="text-sm lg:text-base font-medium text-foreground flex items-center gap-2">
-                                <Code className="text-base text-white" />
-                                {t('skills.frontend.title')}
-                            </h4>
-                            <div className="space-y-3">
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>React & Next.js</span>
-                                        <span>95%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '95%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>TypeScript</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>SAP UI5</span>
-                                        <span>88%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '88%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>HTML/CSS/JavaScript</span>
-                                        <span>92%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '92%' }}></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space-y-4">
-                            <h4 className="text-sm lg:text-base font-medium text-foreground flex items-center gap-2">
-                                <Database className="text-base text-white" />
-                                {t('skills.backend.title')}
-                            </h4>
-                            <div className="space-y-3">
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>Node.js & Express</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>Flutter</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '85%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>MongoDB & PostgreSQL</span>
-                                        <span>80%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '80%' }}></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between text-sm mb-1">
-                                        <span>.NET Core & C#</span>
-                                        <span>65%</span>
-                                    </div>
-                                    <div className="w-full bg-muted rounded-full h-2">
-                                        <div className="bg-primary h-2 rounded-full" style={{ width: '65%' }}></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <SkillsSection
+                            title={t('skills.frontend.title')}
+                            icon={Code}
+                            skills={FRONTEND_SKILLS}
+                        />
+                        <SkillsSection
+                            title={t('skills.backend.title')}
+                            icon={Database}
+                            skills={BACKEND_SKILLS}
+                        />
                     </div>
                 </section>
 
                 {/* Experience Section */}
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
-                    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                        <Briefcase className="text-2xl" />
-                        {t('experienceTitle')}
-                    </h3>
+                    <SectionHeader title={t('experienceTitle')} icon={Briefcase} />
                     <div className="space-y-6">
-                        <div className="relative">
-                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                            <div className="relative pl-8">
-                                <div className="absolute left-0 top-2 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                                <div className="bg-card rounded-lg p-4 border-2 border-primary/50 shadow-lg">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <h4 className="font-medium text-foreground text-lg">Frontend Developer</h4>
-                                        <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-medium">Aktif</span>
-                                    </div>
-                                    <p className="text-sm text-muted-foreground mb-2">Detaysoft • 2021 - Günümüz</p>
-                                    <p className="text-sm text-foreground">
-                                        React ve TypeScript ile modern web uygulamaları geliştiriyorum. SAP UI5 ile enterprise
-                                        çözümler üzerinde çalışıyorum. Kullanıcı deneyimi ve performans odaklı geliştirme yapıyorum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                            <div className="relative pl-8">
-                                <div className="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
-                                <div className="bg-card rounded-lg p-4 border border-border/50">
-                                    <h4 className="font-medium text-foreground text-lg">Software Developer Intern</h4>
-                                    <p className="text-sm text-muted-foreground mb-2">Detaysoft • 2021 - 2021 (2 ay)</p>
-                                    <p className="text-sm text-foreground">
-                                        Frontend teknolojileri ile tanıştım ve React öğrenme sürecinde aktif projelerde yer aldım.
-                                        Takım çalışması ve agile metodolojiler konusunda deneyim kazandım.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                            <div className="relative pl-8">
-                                <div className="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
-                                <div className="bg-card rounded-lg p-4 border border-border/50">
-                                    <h4 className="font-medium text-foreground text-lg">Web Designer</h4>
-                                    <p className="text-sm text-muted-foreground mb-2">Sonart Ajans • 2020 - 2021 (3 ay)</p>
-                                    <p className="text-sm text-foreground">
-                                        HTML, CSS ve JavaScript kullanarak web siteleri tasarladım. Responsive tasarım prensiplerini
-                                        öğrendim ve kullanıcı deneyimi odaklı çalışmalar yaptım.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                            <div className="relative pl-8">
-                                <div className="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
-                                <div className="bg-card rounded-lg p-4 border border-border/50">
-                                    <h4 className="font-medium text-foreground text-lg">Freelance Web Developer</h4>
-                                    <p className="text-sm text-muted-foreground mb-2">Freelance • 2020 - 2020 (10 ay)</p>
-                                    <p className="text-sm text-foreground">
-                                        Çeşitli projeler için web siteleri geliştirdim. Müşteri iletişimi, proje yönetimi ve
-                                        bağımsız çalışma deneyimi kazandım. Farklı sektörlerde projeler tamamladım.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                            <div className="relative pl-8">
-                                <div className="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
-                                <div className="bg-card rounded-lg p-4 border border-border/50">
-                                    <h4 className="font-medium text-foreground text-lg">Lise Zorunlu Staj</h4>
-                                    <p className="text-sm text-muted-foreground mb-2">Çamlıbel Elektrik Dağıtım A.Ş. • 2019 - 2019 (7 ay)</p>
-                                    <p className="text-sm text-foreground">
-                                        Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve
-                                        profesyonel çalışma kültürü konusunda deneyim kazandım.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        {EXPERIENCES.map((experience, index) => (
+                            <ExperienceItem
+                                key={`${experience.title}-${experience.company}-${index}`}
+                                experience={experience}
+                                isLast={index === EXPERIENCES.length - 1}
+                                t={t}
+                            />
+                        ))}
                     </div>
                 </section>
 
                 {/* Education & Certifications */}
                 <section className="bg-card/50 rounded-lg p-6 border border-border/50">
-                    <h3 className="text-lg lg:text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                        <GraduationCap className="text-2xl" />
-                        {t('educationTitle')}
-                    </h3>
+                    <SectionHeader title={t('educationTitle')} icon={GraduationCap} />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
-                            <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">{t('education.managementInformationSystems')}</h4>
-                            <p className="text-sm text-muted-foreground">{t('education.managementInformationSystems.university')}</p>
-                            <p className="text-xs text-muted-foreground mt-1">{t('education.managementInformationSystems.date')}</p>
-                        </div>
-                        <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
-                            <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">{t('education.computerProgramming')}</h4>
-                            <p className="text-sm text-muted-foreground">{t('education.computerProgramming.university')}</p>
-                            <p className="text-xs text-muted-foreground mt-1">{t('education.computerProgramming.date')}</p>
-                        </div>
-                        <div className="bg-card rounded-lg p-4 border border-border/50 text-center hover:border-primary/50 transition-colors">
-                            <GraduationCap className="text-3xl mb-2 mx-auto" />
-                            <h4 className="font-medium text-foreground">{t('education.informationTechnology')}</h4>
-                            <p className="text-sm text-muted-foreground">{t('education.informationTechnology.university')}</p>
-                            <p className="text-xs text-muted-foreground mt-1">{t('education.informationTechnology.date')}</p>
-                        </div>
+                        {educationData.map((education, index) => (
+                            <EducationCard
+                                key={`${education.title}-${index}`}
+                                education={education}
+                                t={t}
+                            />
+                        ))}
                     </div>
                 </section>
             </div>
