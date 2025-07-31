@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useTranslations } from 'next-intl';
-import { 
-    ProfileVideo, 
-    ProfileContent, 
-    ProfileActions 
+import {
+    ProfileVideo,
+    ProfileContent,
+    ProfileActions
 } from "@/components/profile";
 
 interface ProfileProps {
@@ -31,16 +31,16 @@ export const Profile = ({
 
     return (
         <div className={`relative w-full lg:w-2/5 h-auto lg:h-full bg-card rounded-lg lg:rounded-r-none lg:rounded-br-none shadow-xs flex flex-col border border-border ${className || ''}`}>
-            <ProfileVideo 
+            <ProfileVideo
                 videoSrc={videoSrc}
                 avatarSrc={avatarSrc}
                 avatarAlt={avatarAlt}
             />
-            <ProfileContent 
+            <ProfileContent
                 t={t}
                 typewriterStrings={typewriterStrings}
             />
-            <ProfileActions 
+            <ProfileActions
                 t={t}
                 downloadHref={downloadHref}
                 contactHref={contactHref}

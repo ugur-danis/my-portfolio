@@ -113,7 +113,7 @@ export const Header = () => {
 
     return (
         <>
-            {/* Desktop Header - Sol tarafta */}
+            {/* Desktop Header - Left Side */}
             <div className="hidden lg:block absolute z-10 top-10 left-[-50] w-20 bg-card/90 backdrop-blur-sm flex-col items-center py-4 font-thin text-xs rounded-xl shadow-lg border border-border">
                 <nav>
                     <div className="mb-6 border-b-2 border-border pb-4 space-y-2">
@@ -133,7 +133,7 @@ export const Header = () => {
                 </nav>
             </div>
 
-            {/* Mobile Header - Üst kısımda */}
+            {/* Mobile Header - Top Side */}
             <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
                 <nav className="px-1 sm:px-2 py-1">
                     <ul className="flex justify-around items-center">

@@ -13,7 +13,7 @@ export const ProfileActions = ({
     downloadHref = "#", 
     contactHref = "#contact" 
 }: ProfileActionsProps) => (
-    <div className="mt-auto">
+    <div className="mt-auto hidden md:block">
         <div className="flex">
             <ProfileButton
                 href={downloadHref}

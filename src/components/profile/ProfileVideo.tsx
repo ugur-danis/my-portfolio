@@ -11,7 +11,7 @@ export const ProfileVideo = ({
     avatarSrc = "/avatar.png", 
     avatarAlt = "Profile" 
 }: ProfileVideoProps) => (
-    <div className="h-48 sm:h-56 md:h-64 lg:h-1/2 relative">
+    <div className="h-48 sm:h-56 md:h-64 md:block lg:h-1/2 relative hidden">
         <video
             className="profile-video w-full h-full object-cover"
             autoPlay

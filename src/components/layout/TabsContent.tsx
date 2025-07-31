@@ -65,7 +65,7 @@ export const TabsContent = () => {
                     exit="out"
                     variants={pageVariants}
                     transition={pageTransition}
-                    className="w-full h-full"
+                    className="w-full lg:h-full h-[calc(100vh-14rem)]"
                 >
                     {renderTabContent(currentRoute)}
                 </motion.div>
