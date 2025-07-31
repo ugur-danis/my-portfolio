@@ -1,4 +1,4 @@
-export { About } from './About';
-export { Resume } from './Resume';
-export { Projects } from './Projects';
-export { Contact } from './Contact'; 
+export { AboutPage } from './AboutPage';
+export { ResumePage } from './ResumePage';
+export { ProjectsPage } from './ProjectsPage';
+export { ContactPage } from './ContactPage'; 

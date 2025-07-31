@@ -2,20 +2,20 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useRoute, RouteType } from "@/context/route/RouteContext";
-import { About, Resume, Projects, Contact } from "@/components/pages";
+import { AboutPage, ResumePage, ProjectsPage, ContactPage } from "@/components/pages";
 
 const renderTabContent = (tab: RouteType) => {
     switch (tab) {
         case "#about":
-            return <About />;
+            return <AboutPage />;
         case "#resume":
-            return <Resume />;
+            return <ResumePage />;
         case "#projects":
-            return <Projects />;
+            return <ProjectsPage />;
         case "#contact":
-            return <Contact />;
+            return <ContactPage />;
         default:
-            return <About />;
+            return <AboutPage />;
     }
 };
 

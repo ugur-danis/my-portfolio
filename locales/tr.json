@@ -23,42 +23,7 @@
     "quote": "Kahvemi sade, kodumu temiz severim.",
     "skillsTitle": "Ne Yapıyorum?"
   },
-  "projects": {
-    "title": "Projelerim",
-    "projectCount": "Proje",
-    "code": "Kod",
-    "demo": "Demo",
-    "status": {
-      "completed": "Tamamlandı",
-      "active": "Aktif"
-    },
-    "items": [
-      {
-        "title": "E-Ticaret Web Uygulaması",
-        "description": "React ve Node.js ile geliştirilmiş tam kapsamlı e-ticaret platformu. Kullanıcı yönetimi, ürün kataloğu, sepet işlemleri ve ödeme entegrasyonu içerir."
-      },
-      {
-        "title": "Fitness Takip Uygulaması",
-        "description": "Flutter ile geliştirilmiş cross-platform mobil uygulama. Egzersiz takibi, kalori hesaplama ve ilerleme grafikleri özellikleri bulunur."
-      },
-      {
-        "title": "Task Management API",
-        "description": "Node.js ve Express ile geliştirilmiş RESTful API. Kullanıcı görev yönetimi, takım çalışması ve gerçek zamanlı bildirimler."
-      },
-      {
-        "title": "Portfolio Web Sitesi",
-        "description": "Next.js ve TypeScript ile geliştirilmiş modern portfolio sitesi. Responsive tasarım, dark mode ve animasyonlar içerir."
-      },
-      {
-        "title": "Hava Durumu Uygulaması",
-        "description": "React Native ile geliştirilmiş hava durumu uygulaması. Konum bazlı hava durumu bilgisi ve 7 günlük tahmin."
-      },
-      {
-        "title": "Blog Platformu",
-        "description": "Full-stack blog platformu. Markdown desteği, yorum sistemi ve admin paneli özellikleri."
-      }
-    ]
-  },
+  "projects": {},
   "skills": {
     "mobile": {
       "title": "Mobil Geliştirme",
@@ -108,11 +73,10 @@
     "skillsTitle": "Yeteneklerim",
     "experienceTitle": "Deneyim",
     "educationTitle": "Eğitim",
-    "active": "Aktif",
     "education": {
       "managementInformationSystems": {
         "title": "Yönetim Bilişim Sistemleri",
-        "university": "Anadolu Üniversitesi Açıköğretim Fakültesi",
+        "university": "Anadolu Üniversitesi AÖF",
         "date": "2024 - Devam Ediyor"
       },
       "computerProgramming": {
@@ -161,5 +125,6 @@
         "description": "Lise zorunlu stajım kapsamında kurumsal çalışma ortamını tanıdım. İş disiplini ve profesyonel çalışma kültürü konusunda deneyim kazandım."
       }
     }
-  }
+  },
+  "active": "Aktif"
 }

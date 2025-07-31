@@ -23,42 +23,7 @@
     "quote": "I like my coffee black, my code clean.",
     "skillsTitle": "What Do I Do?"
   },
-  "projects": {
-    "title": "My Projects",
-    "projectCount": "Projects",
-    "code": "Code",
-    "demo": "Demo",
-    "status": {
-      "completed": "Completed",
-      "active": "Active"
-    },
-    "items": [
-      {
-        "title": "E-Commerce Web Application",
-        "description": "A comprehensive e-commerce platform developed with React and Node.js. Includes user management, product catalog, cart operations, and payment integration."
-      },
-      {
-        "title": "Fitness Tracking Application",
-        "description": "Cross-platform mobile application developed with Flutter. Features exercise tracking, calorie calculation, and progress charts."
-      },
-      {
-        "title": "Task Management API",
-        "description": "RESTful API developed with Node.js and Express. User task management, team collaboration, and real-time notifications."
-      },
-      {
-        "title": "Portfolio Website",
-        "description": "Modern portfolio website developed with Next.js and TypeScript. Includes responsive design, dark mode, and animations."
-      },
-      {
-        "title": "Weather Application",
-        "description": "Weather application developed with React Native. Location-based weather information and 7-day forecast."
-      },
-      {
-        "title": "Blog Platform",
-        "description": "Full-stack blog platform. Markdown support, comment system, and admin panel features."
-      }
-    ]
-  },
+  "projects": {},
   "skills": {
     "mobile": {
       "title": "Mobile Development",
@@ -108,11 +73,10 @@
     "skillsTitle": "Skills",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
-    "active": "Active",
     "education": {
       "managementInformationSystems": {
         "title": "Management Information Systems",
-        "university": "Anadolu University Open Education Faculty",
+        "university": "Anadolu University OEF",
         "date": "2024 - Present"
       },
       "computerProgramming": {
@@ -122,7 +86,7 @@
       },
       "informationTechnology": {
         "title": "Web Programming",
-        "university": "Sivas Bilişim Teknolojileri M.T.A.L",
+        "university": "Sivas Information Technologies VTHS",
         "date": "2017 - 2019"
       }
     },
@@ -157,5 +121,6 @@
         "description": "I gained experience in corporate work environment during my compulsory internship at Çamlıbel Elektrik Dağıtım A.Ş. I gained experience in work discipline and professional work culture."
       }
     }
-  }
+  },
+  "active": "Active"
 }

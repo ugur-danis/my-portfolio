@@ -6,7 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: 'sm' | 'md' | 'lg';
     icon?: React.ReactNode;
     loading?: boolean;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 const buttonVariants = {
@@ -23,15 +23,15 @@ const buttonSizes = {
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ 
-        className, 
-        variant = 'primary', 
-        size = 'md', 
-        icon, 
+    ({
+        className,
+        variant = 'primary',
+        size = 'md',
+        icon,
         loading = false,
         disabled,
-        children, 
-        ...props 
+        children,
+        ...props
     }, ref) => {
         return (
             <button
