@@ -45,14 +45,14 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen text-foreground flex items-center justify-center p-4 pb-20 lg:pb-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen text-foreground flex items-center justify-center p-2 sm:p-4 pb-20 lg:pb-4`}
       >
         <NextIntlClientProvider>
           <ThemeProvider>
             <RouteContextProvider>
               <MatrixRainBackground />
               {/* Container */}
-              <div className="w-full max-w-7xl h-[80vh] mx-auto relative rounded-lg shadow-lg opacity-80">
+              <div className="w-full max-w-4xl xl:max-w-6xl 2xl:max-w-7xl h-[90vh] sm:h-[85vh] lg:h-[80vh] mx-auto relative rounded-lg shadow-lg opacity-80">
                 <Header />
                 <div className="w-full h-full flex flex-col lg:flex-row">
                   <Profile />

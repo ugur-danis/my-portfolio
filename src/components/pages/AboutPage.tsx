@@ -48,7 +48,7 @@ const SkillsSection = ({ t, tSkills }: { t: TranslationFunction; tSkills: Transl
     return (
         <section className="space-y-4">
             <PageTitle title={t('skillsTitle')} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {skillsData.map((skill, index) => (
                     <SkillCard
                         key={`${skill.title}-${index}`}

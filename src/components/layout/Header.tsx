@@ -134,7 +134,7 @@ export const Header = () => {
 
             {/* Mobile Header - Alt kısımda */}
             <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-t border-border">
-                <nav className="px-4 py-2">
+                <nav className="px-2 sm:px-4 py-2">
                     <ul className="flex justify-between items-center">
                         {navItems.map((item) => (
                             <NavItemComponent

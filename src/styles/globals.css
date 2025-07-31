@@ -22,6 +22,12 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  .profile-video {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 8% 100%, 0% 92%);
+  }
+}
+
 /* Mobil için smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -41,6 +47,26 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+}
+
+/* Tablet için ek optimizasyonlar */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Küçük mobil cihazlar için ek optimizasyonlar */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 

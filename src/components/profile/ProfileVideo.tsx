@@ -11,7 +11,7 @@ export const ProfileVideo = ({
     avatarSrc = "/avatar.png", 
     avatarAlt = "Profile" 
 }: ProfileVideoProps) => (
-    <div className="h-48 lg:h-1/2 relative">
+    <div className="h-48 sm:h-56 md:h-64 lg:h-1/2 relative">
         <video
             className="profile-video w-full h-full object-cover"
             autoPlay
@@ -22,8 +22,8 @@ export const ProfileVideo = ({
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
-        <div className="absolute -bottom-8 lg:-bottom-15 left-1/2 transform -translate-x-1/2">
-            <div className="w-24 h-24 lg:w-36 lg:h-36">
+        <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-15 left-1/2 transform -translate-x-1/2">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36">
                 <Image
                     priority={true}
                     width={144}
