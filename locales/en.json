@@ -23,7 +23,24 @@
     "quote": "I like my coffee black, my code clean.",
     "skillsTitle": "What Do I Do?"
   },
-  "projects": {},
+  "projects": {
+    "title": "My Projects",
+    "description": "Some of the projects I've developed",
+    "tabuApp": {
+      "title": "TA BU - Mobile Taboo Game",
+      "description": "A mobile taboo game developed with Flutter, designed for having fun with friends. Available on Google Play Store and Apple App Store. Features modern UI/UX design and smooth gaming experience.",
+      "technologies": "Flutter, Dart, Firebase",
+      "features": "Multiplayer mode, custom word lists, statistics, offline playability, published on app stores"
+    },
+    "googleKeepClone": {
+      "title": "Google Keep Clone",
+      "description": "A modern note-taking mobile application developed with Flutter, featuring core Google Keep functionality. Cross-platform mobile app with intuitive interface and offline capabilities.",
+      "technologies": "Flutter, Dart, Firebase",
+      "features": "Note creation/editing, categories, search, offline sync, cross-platform"
+    },
+    "technologies": "Technologies",
+    "features": "Features"
+  },
   "skills": {
     "mobile": {
       "title": "Mobile Development",

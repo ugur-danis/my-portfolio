@@ -23,7 +23,24 @@
     "quote": "Kahvemi sade, kodumu temiz severim.",
     "skillsTitle": "Ne Yapıyorum?"
   },
-  "projects": {},
+  "projects": {
+    "title": "Projelerim",
+    "description": "Geliştirdiğim bazı projeler",
+    "tabuApp": {
+      "title": "TA BU - Mobil Tabu Oyunu",
+      "description": "Flutter ile geliştirilmiş, arkadaşlarla eğlenceli vakit geçirmek için tasarlanmış mobil tabu oyunu. Google Play Store ve Apple App Store'da mevcut. Modern UI/UX tasarımı ve akıcı oyun deneyimi sunar.",
+      "technologies": "Flutter, Dart, Firebase",
+      "features": "Çok oyunculu mod, özel kelime listeleri, istatistikler, offline oynanabilirlik, uygulama mağazalarında yayınlandı"
+    },
+    "googleKeepClone": {
+      "title": "Google Keep Clone",
+      "description": "Flutter ile geliştirilmiş, Google Keep'in temel özelliklerini içeren modern not alma mobil uygulaması. Çapraz platform mobil uygulama, sezgisel arayüz ve çevrimdışı özellikler.",
+      "technologies": "Flutter, Dart, Firebase",
+      "features": "Not oluşturma/düzenleme, kategoriler, arama, çevrimdışı senkronizasyon, çapraz platform"
+    },
+    "technologies": "Teknolojiler",
+    "features": "Özellikler"
+  },
   "skills": {
     "mobile": {
       "title": "Mobil Geliştirme",

@@ -7,3 +7,5 @@ export type TIconProps = {
 export { GitHubIcon } from "./GitHubIcon";
 export { LinkedInIcon } from "./LinkedInIcon";
 export { InstagramIcon } from "./InstagramIcon";
+export { AppStoreIcon } from "./AppStoreIcon";
+export { PlayStoreIcon } from "./PlayStoreIcon";

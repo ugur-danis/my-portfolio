@@ -12,3 +12,4 @@ export { ExperienceItem } from './ExperienceItem';
 export { EducationCard } from './EducationCard';
 export { ContactInfoItem } from './ContactInfoItem';
 export { ContactForm } from './ContactForm';
+export { ProjectCard } from './ProjectCard';
