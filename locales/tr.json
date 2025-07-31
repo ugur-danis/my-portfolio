@@ -27,16 +27,16 @@
     "title": "Projelerim",
     "description": "Geliştirdiğim bazı projeler",
     "tabuApp": {
-      "title": "TA BU - Mobil Tabu Oyunu",
-      "description": "Flutter ile geliştirilmiş, arkadaşlarla eğlenceli vakit geçirmek için tasarlanmış mobil tabu oyunu. Google Play Store ve Apple App Store'da mevcut. Modern UI/UX tasarımı ve akıcı oyun deneyimi sunar.",
-      "technologies": "Flutter, Dart, Firebase",
-      "features": "Çok oyunculu mod, özel kelime listeleri, istatistikler, offline oynanabilirlik, uygulama mağazalarında yayınlandı"
+      "title": "TA BU: Kategorili Tabu Oyunu",
+      "description": "Flutter ile geliştirdiğim TA BU, klasik tabu oyununu farklı kategorilerle zenginleştiren bir mobil oyun uygulamasıdır. Oyuncular diledikleri kategoriyi seçerek kolay veya zor modda oynayabilirler.",
+      "technologies": "Flutter, BLoc, Firebase",
+      "features": "Android ve iOS için tek kod tabanıyla geliştirilmiştir.|BLoC mimarisi ile oyun akışı ve durum yönetimi sağlanmıştır.|Genel kültür, müzik, spor, yemek gibi çeşitli kategoriler içerir.|Süre, tur ve pas hakkı gibi oyun ayarları kullanıcı tarafından belirlenebilir.|Basit ve kullanıcı dostu arayüz tasarımına sahiptir.|Uygulama Play Store ve App Store mağazalarında yayınlandı."
     },
     "googleKeepClone": {
       "title": "Google Keep Clone",
-      "description": "Flutter ile geliştirilmiş, Google Keep'in temel özelliklerini içeren modern not alma mobil uygulaması. Çapraz platform mobil uygulama, sezgisel arayüz ve çevrimdışı özellikler.",
-      "technologies": "Flutter, Dart, Firebase",
-      "features": "Not oluşturma/düzenleme, kategoriler, arama, çevrimdışı senkronizasyon, çapraz platform"
+      "description": "Bu proje, Google Keep uygulamasının bire bir kopyası olarak Flutter ile geliştirilmiştir. Amaç, gerçek bir uygulamanın işlevselliğini ve tasarımını Flutter kullanarak sıfırdan yeniden oluşturmaktır. Bu proje, Flutter ile modern UI tasarımı, Firebase entegrasyonu ve profesyonel uygulama klonlama becerilerimi sergilemek amacıyla hazırlanmıştır.",
+      "technologies": "Flutter, Provider, Firebase",
+      "features": "Not oluşturma, düzenleme, silme.|Renk seçimi ve sabitleme (pin).|Liste tipi notlar, arama ve sıralama.|Flutter ile responsive ve sade kullanıcı arayüzü geliştirildi.|Firebase Firestore ile gerçek zamanlı veri saklama.|Firebase Authentication ile kullanıcı girişi."
     },
     "technologies": "Teknolojiler",
     "features": "Özellikler"

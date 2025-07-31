@@ -27,16 +27,16 @@
     "title": "My Projects",
     "description": "Some of the projects I've developed",
     "tabuApp": {
-      "title": "TA BU - Mobile Taboo Game",
-      "description": "A mobile taboo game developed with Flutter, designed for having fun with friends. Available on Google Play Store and Apple App Store. Features modern UI/UX design and smooth gaming experience.",
-      "technologies": "Flutter, Dart, Firebase",
-      "features": "Multiplayer mode, custom word lists, statistics, offline playability, published on app stores"
+      "title": "TA BU: Categorized Taboo Game",
+      "description": "TA BU, which I developed with Flutter, is a mobile game application that enriches the classic Taboo game with different categories. Players can choose any category they want and play in easy or hard mode.",
+      "technologies": "Flutter, BLoc, Firebase",
+      "features": "Developed with a single codebase for both Android and iOS.|Game flow and state management are provided by BLoC architecture.|Includes various categories such as general knowledge, music, sports, and food.|Game settings like time, round, and pass rights can be customized by the user.|Features a simple and user-friendly interface design.|Published on Play Store and App Store."
     },
     "googleKeepClone": {
       "title": "Google Keep Clone",
-      "description": "A modern note-taking mobile application developed with Flutter, featuring core Google Keep functionality. Cross-platform mobile app with intuitive interface and offline capabilities.",
-      "technologies": "Flutter, Dart, Firebase",
-      "features": "Note creation/editing, categories, search, offline sync, cross-platform"
+      "description": "This project is a one-to-one clone of the Google Keep application, developed with Flutter. The goal is to recreate the functionality and design of a real application from scratch using Flutter. This project was prepared to showcase my skills in modern UI design with Flutter, Firebase integration, and professional app cloning.",
+      "technologies": "Flutter, Provider, Firebase",
+      "features": "Create, edit, and delete notes.|Color selection and pinning.|List-type notes, search, and sorting.|Responsive and simple user interface developed with Flutter.|Real-time data storage with Firebase Firestore.|User authentication with Firebase Authentication."
     },
     "technologies": "Technologies",
     "features": "Features"

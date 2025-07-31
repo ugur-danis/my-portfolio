@@ -21,7 +21,7 @@ const ProjectsContent = ({ t }: { t: TranslationFunction; }) => {
             description: t('googleKeepClone.description'),
             technologies: t('googleKeepClone.technologies'),
             features: t('googleKeepClone.features'),
-            githubUrl: "https://github.com/ugurdanis/google-keep-clone",
+            githubUrl: "https://github.com/ugur-danis/google_keep_clone",
         }
     ], [t]);
 

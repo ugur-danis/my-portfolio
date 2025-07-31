@@ -22,7 +22,7 @@ interface ProjectCardProps {
 export const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
     ({ title, description, technologies, features, technologiesLabel, featuresLabel, githubUrl, liveUrl, appStoreUrl, playStoreUrl, className }, ref) => {
         const techList = technologies.split(", ");
-        const featureList = features.split(", ");
+        const featureList = features.split("|");
 
         return (
             <Card
