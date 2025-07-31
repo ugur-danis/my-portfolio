@@ -7,7 +7,14 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         }
         try {
             const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
+            if (!item) return initialValue;
+            
+            const parsed = JSON.parse(item);
+            // Tema için özel kontrol
+            if (key === 'theme' && parsed !== 'dark' && parsed !== 'light') {
+                return initialValue;
+            }
+            return parsed;
         } catch (error) {
             console.error(`Error reading localStorage key "${key}":`, error);
             return initialValue;

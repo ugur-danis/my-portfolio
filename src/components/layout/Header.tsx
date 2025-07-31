@@ -52,7 +52,8 @@ const LanguageSwitcher = () => {
     const switchLanguage = () => {
         const newLocale = locale === 'tr' ? 'en' : 'tr';
         const currentPath = pathname.replace(`/${locale}`, '');
-        router.push(`/${newLocale}${currentPath}`);
+        // replace kullanarak sayfa geçmişini değiştir, yeniden yüklemeyi önle
+        router.replace(`/${newLocale}${currentPath}`);
     };
 
     const nextLanguage = locale === 'tr' ? 'EN' : 'TR';
@@ -78,7 +79,7 @@ const LanguageSwitcher = () => {
 };
 
 const ThemeToggle = () => {
-    const { theme, toggleTheme } = useTheme();
+    const { theme, toggleTheme, isLoaded } = useTheme();
 
     return (
         <Button
@@ -87,6 +88,7 @@ const ThemeToggle = () => {
             icon={theme === 'dark' ? <Sun className="text-yellow-400" /> : <Moon className="text-blue-400" />}
             onClick={toggleTheme}
             className="w-full"
+            disabled={!isLoaded}
         />
     );
 };
