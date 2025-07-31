@@ -28,7 +28,7 @@ export const ProfileContent = ({
             />
         </div>
 
-        <p className="text-xs lg:text-sm text-muted-foreground text-center mt-2 px-4 leading-relaxed">
+        <p className="text-xs lg:text-sm text-muted-foreground text-center mt-2 px-12 leading-relaxed">
             {t('description')}
         </p>
 
