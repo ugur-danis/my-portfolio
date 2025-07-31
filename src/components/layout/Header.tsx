@@ -12,14 +12,14 @@ import { NavItem, TranslationFunction } from "@/types";
 import { cn } from "@/lib/utils";
 
 // Components
-const NavItemComponent = ({ 
-    item, 
-    isActive, 
-    onClick 
-}: { 
-    item: NavItem; 
-    isActive: boolean; 
-    onClick: () => void; 
+const NavItemComponent = ({
+    item,
+    isActive,
+    onClick
+}: {
+    item: NavItem;
+    isActive: boolean;
+    onClick: () => void;
 }) => (
     <li className="lg:w-full lg:mb-6 lg:border-b-2 lg:border-border lg:last:mb-0 lg:last:border-b-0">
         <Button
@@ -27,6 +27,7 @@ const NavItemComponent = ({
             size="sm"
             className={cn(
                 "w-full lg:flex-col lg:py-2 lg:px-0 lg:mb-1 lg:rounded-lg",
+                "flex flex-col items-center justify-center py-2 px-1",
                 isActive && "lg:scale-110"
             )}
             onClick={onClick}
@@ -37,7 +38,7 @@ const NavItemComponent = ({
             )}>
                 {item.icon}
             </div>
-            <span className="ml-2 lg:ml-0 lg:mt-1 text-xs font-medium">
+            <span className="mt-1 lg:ml-0 lg:mt-1 text-xs font-medium text-center">
                 {item.name}
             </span>
         </Button>
@@ -132,10 +133,10 @@ export const Header = () => {
                 </nav>
             </div>
 
-            {/* Mobile Header - Alt kısımda */}
-            <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-t border-border">
-                <nav className="px-2 sm:px-4 py-2">
-                    <ul className="flex justify-between items-center">
+            {/* Mobile Header - Üst kısımda */}
+            <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+                <nav className="px-1 sm:px-2 py-1">
+                    <ul className="flex justify-around items-center">
                         {navItems.map((item) => (
                             <NavItemComponent
                                 key={item.name}

@@ -45,7 +45,7 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen text-foreground flex items-center justify-center p-2 sm:p-4 pb-20 lg:pb-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen text-foreground flex items-center justify-center p-2 sm:p-4 pt-16 lg:pt-4`}
       >
         <NextIntlClientProvider>
           <ThemeProvider>
