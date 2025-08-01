@@ -44,6 +44,12 @@
       "technologies": "Flutter, Provider, Firebase",
       "features": "Create, edit, and delete notes.|Color selection and pinning.|List-type notes, search, and sorting.|Responsive and simple user interface developed with Flutter.|Real-time data storage with Firebase Firestore.|User authentication with Firebase Authentication."
     },
+    "portfolio": {
+      "title": "Personal Portfolio Website",
+      "description": "A modern, responsive, and high-performance personal portfolio website. Developed using Next.js 15, TypeScript, Tailwind CSS, and modern web technologies. Features multi-language support, dark/light mode, animations, and SEO optimization.",
+      "technologies": "Next.js 15, TypeScript, Tailwind CSS, Framer Motion",
+      "features": "Multi-language support (Turkish/English).|Dark/Light mode automatic theme switching.|Responsive design perfect appearance on all devices.|Performance optimization fast loading.|Modern UI/UX clean and user-friendly interface.|SEO optimization optimized for search engines.|Modular structure reusable components."
+    },
     "technologies": "Technologies",
     "features": "Features"
   },

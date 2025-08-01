@@ -44,6 +44,12 @@
       "technologies": "Flutter, Provider, Firebase",
       "features": "Not oluşturma, düzenleme, silme.|Renk seçimi ve sabitleme (pin).|Liste tipi notlar, arama ve sıralama.|Flutter ile responsive ve sade kullanıcı arayüzü geliştirildi.|Firebase Firestore ile gerçek zamanlı veri saklama.|Firebase Authentication ile kullanıcı girişi."
     },
+    "portfolio": {
+      "title": "Kişisel Portföy Web Sitesi",
+      "description": "Modern, responsive ve performanslı bir kişisel portfolio web sitesi. Next.js 15, TypeScript, Tailwind CSS ve modern web teknolojileri kullanılarak geliştirilmiştir. Çoklu dil desteği, dark/light mode, animasyonlar ve SEO optimizasyonu içerir.",
+      "technologies": "Next.js 15, TypeScript, Tailwind CSS, Framer Motion",
+      "features": "Çoklu dil desteği (Türkçe/İngilizce).|Dark/Light mode otomatik tema değiştirme.|Responsive tasarım tüm cihazlarda mükemmel görünüm.|Performans optimizasyonu hızlı yükleme.|Modern UI/UX temiz ve kullanıcı dostu arayüz.|SEO optimizasyonu arama motorları için optimize edilmiş.|Modüler yapı yeniden kullanılabilir bileşenler."
+    },
     "technologies": "Teknolojiler",
     "features": "Özellikler"
   },

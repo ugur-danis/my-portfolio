@@ -22,6 +22,14 @@ const ProjectsContent = ({ t }: { t: TranslationFunction; }) => {
             technologies: t('googleKeepClone.technologies'),
             features: t('googleKeepClone.features'),
             githubUrl: "https://github.com/ugur-danis/google_keep_clone",
+        },
+        {
+            title: t('portfolio.title'),
+            description: t('portfolio.description'),
+            technologies: t('portfolio.technologies'),
+            features: t('portfolio.features'),
+            liveUrl: "https://ugur-danis.vercel.app/",
+            githubUrl: "https://github.com/ugur-danis/my-portfolio",
         }
     ], [t]);
 
@@ -44,6 +52,7 @@ const ProjectsContent = ({ t }: { t: TranslationFunction; }) => {
                         features={project.features}
                         technologiesLabel={t('technologies')}
                         featuresLabel={t('features')}
+                        liveUrl={project.liveUrl}
                         githubUrl={project.githubUrl}
                         appStoreUrl={project.appStoreUrl}
                         playStoreUrl={project.playStoreUrl}
